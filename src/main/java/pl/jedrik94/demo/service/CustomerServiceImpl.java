@@ -11,9 +11,9 @@ import java.util.List;
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
-    @Autowired
     private final CustomerRepository customerRepository;
 
+    @Autowired
     public CustomerServiceImpl(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
     }
@@ -40,11 +40,5 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void deleteCustomer(int id) {
         customerRepository.deleteCustomer(id);
-    }
-
-    @Transactional
-    @Override
-    public List<Customer> searchCustomer(String searchName) {
-        return customerRepository.searchCustomer(searchName);
     }
 }

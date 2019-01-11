@@ -12,6 +12,4 @@ public interface CustomerRepository {
     Customer getCustomer(int id);
 
     void deleteCustomer(int id);
-
-    List<Customer> searchCustomer(String searchName);
 }
